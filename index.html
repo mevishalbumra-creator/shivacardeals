@@ -1065,7 +1065,7 @@ document.getElementById('valuationForm').addEventListener('submit', async e=>{
   submitBtn.disabled = true;
   try{
     await submitToWeb3Forms(form);
-    showToast('Your valuation request was sent — we\\'ll confirm the final offer shortly.');
+    showToast("Your valuation request was sent — we'll confirm the final offer shortly.");
   }catch(err){
     showToast("Estimate shown below, but we couldn't notify our team — please call us directly.");
   }finally{
@@ -1129,7 +1129,7 @@ document.getElementById('contactForm').addEventListener('submit', async e=>{
   btn.disabled = true;
   try{
     await submitToWeb3Forms(form);
-    showToast('Message sent — we\\'ll get back to you within the hour.');
+    showToast("Message sent — we'll get back to you within the hour.");
     form.reset();
   }catch(err){
     showToast("Couldn't send — please try again or call us directly.");
