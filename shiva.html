@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shiva Car Deals — New & Used Cars in Jhojhu Kalan, Haryana</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Work+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap');
+
+:root{
+  --asphalt:#15171B;
+  --panel:#1E2128;
+  --panel-2:#262A32;
+  --cream:#F6F4EC;
+  --paper:#EFEBDF;
+  --amber:#FFB020;
+  --amber-dim:#8a6216;
+  --red:#D6483F;
+  --line:rgba(255,255,255,0.09);
+  --line-dark:rgba(21,23,27,0.14);
+  --ink:#15171B;
+  --ink-soft:#4b4f58;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--asphalt);
+  color:var(--cream);
+  font-family:'Work Sans', sans-serif;
+  line-height:1.5;
+  overflow-x:hidden;
+}
+h1,h2,h3,h4,.display{
+  font-family:'Oswald', sans-serif;
+  text-transform:uppercase;
+  letter-spacing:0.02em;
+  font-weight:700;
+}
+.mono{font-family:'Space Mono', monospace;}
+a{color:inherit; text-decoration:none;}
+button{font-family:inherit; cursor:pointer; border:none;}
+img{max-width:100%; display:block;}
+.wrap{max-width:1180px; margin:0 auto; padding:0 24px;}
+.eyebrow{
+  font-family:'Space Mono', monospace;
+  font-size:12px;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  color:var(--amber);
+  display:flex; align-items:center; gap:10px;
+}
+.eyebrow::before{content:""; width:22px; height:2px; background:var(--amber); display:inline-block;}
+section{padding:96px 0;}
+@media(max-width:760px){ section{padding:64px 0;} }
+
+/* ---------- plate badge signature ---------- */
+.plate{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background:var(--paper);
+  color:var(--ink);
+  border:2.5px solid var(--ink);
+  border-radius:4px;
+  padding:4px 10px;
+  font-family:'Space Mono', monospace;
+  font-weight:700;
+  font-size:13px;
+  letter-spacing:0.04em;
+  box-shadow: 2px 2px 0 rgba(0,0,0,0.25);
+  white-space:nowrap;
+}
+.plate .flag{
+  background:#1b3a8a;
+  color:#fff;
+  font-size:9px;
+  padding:2px 4px;
+  border-radius:2px;
+  letter-spacing:0;
+}
+.plate.amber-plate{ background:var(--amber); border-color:var(--ink); }
+.plate.red-plate{ background:#f0dede; }
+
+/* ---------- nav ---------- */
+header{
+  position:sticky; top:0; z-index:500;
+  background:rgba(21,23,27,0.92);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+nav{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:16px 24px; max-width:1180px; margin:0 auto;
+}
+.logo{
+  display:flex; align-items:center; gap:10px;
+  font-family:'Oswald'; font-weight:700; font-size:20px; letter-spacing:0.03em;
+}
+.logo-badge{
+  width:38px; height:38px; border-radius:6px;
+  background:linear-gradient(135deg, var(--amber), #d97f0a);
+  display:flex; align-items:center; justify-content:center;
+  color:var(--ink); font-weight:700; font-size:18px;
+}
+.logo span{color:var(--amber);}
+.nav-links{
+  display:flex; gap:30px; align-items:center;
+  font-size:14px; font-weight:500; letter-spacing:0.03em;
+}
+.nav-links a{ position:relative; padding:6px 0; opacity:0.85; transition:opacity .2s;}
+.nav-links a:hover{opacity:1; color:var(--amber);}
+.nav-cta{
+  display:flex; gap:10px; align-items:center;
+}
+.btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:8px;
+  padding:12px 22px;
+  border-radius:3px;
+  font-weight:600; font-size:14px;
+  letter-spacing:0.03em;
+  text-transform:uppercase;
+  font-family:'Oswald';
+  transition:transform .15s ease, box-shadow .15s ease, background .2s;
+  cursor:pointer;
+}
+.btn-amber{ background:var(--amber); color:var(--ink); }
+.btn-amber:hover{ transform:translateY(-2px); box-shadow:0 6px 18px rgba(255,176,32,0.35); }
+.btn-outline{ background:transparent; color:var(--cream); border:1.5px solid var(--line); }
+.btn-outline:hover{ border-color:var(--amber); color:var(--amber); }
+.btn-dark{ background:var(--ink); color:var(--paper); }
+.btn-dark:hover{ transform:translateY(-2px); }
+.btn-sm{ padding:9px 16px; font-size:12px; }
+.btn-full{ width:100%; }
+.hamburger{ display:none; flex-direction:column; gap:5px; background:none; padding:6px; }
+.hamburger span{ width:24px; height:2px; background:var(--cream); display:block; }
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;
+  padding:90px 0 70px;
+  background:
+    radial-gradient(ellipse at 80% 0%, rgba(255,176,32,0.10), transparent 55%),
+    linear-gradient(180deg, #15171B 0%, #14161A 100%);
+  overflow:hidden;
+}
+.hero::after{
+  content:"";
+  position:absolute; left:0; right:0; bottom:0; height:1px;
+  background:var(--line);
+}
+.hero-grid{
+  display:grid; grid-template-columns:1.1fr 0.9fr; gap:56px; align-items:center;
+}
+@media(max-width:900px){ .hero-grid{ grid-template-columns:1fr; } }
+.hero h1{
+  font-size:clamp(34px, 5vw, 56px);
+  line-height:1.05;
+  margin:18px 0 20px;
+}
+.hero h1 em{ font-style:normal; color:var(--amber); }
+.hero p.lead{
+  font-size:17px; color:#c7c5bd; max-width:480px; margin-bottom:30px;
+}
+.hero-actions{ display:flex; gap:14px; flex-wrap:wrap; margin-bottom:36px; }
+.stat-row{ display:flex; gap:34px; flex-wrap:wrap; }
+.stat b{ display:block; font-family:'Space Mono'; font-size:26px; color:var(--amber); }
+.stat span{ font-size:12px; letter-spacing:0.06em; color:#9c9a92; text-transform:uppercase; }
+
+/* search widget card */
+.search-card{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:26px;
+  box-shadow:0 20px 60px rgba(0,0,0,0.4);
+}
+.mode-toggle{
+  display:flex; background:var(--panel-2); border-radius:6px; padding:4px; margin-bottom:20px;
+}
+.mode-toggle button{
+  flex:1; background:transparent; color:#9c9a92; padding:10px 6px; border-radius:4px;
+  font-family:'Oswald'; font-size:12.5px; letter-spacing:0.04em; text-transform:uppercase; font-weight:600;
+  transition:all .2s;
+}
+.mode-toggle button.active{ background:var(--amber); color:var(--ink); }
+.field-label{ font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:#9c9a92; margin-bottom:6px; display:block; }
+.field{ margin-bottom:16px; }
+select, input, textarea{
+  width:100%;
+  background:var(--panel-2);
+  border:1px solid var(--line);
+  color:var(--cream);
+  padding:12px 14px;
+  border-radius:5px;
+  font-family:'Work Sans';
+  font-size:14px;
+}
+select:focus, input:focus, textarea:focus{ outline:2px solid var(--amber); outline-offset:1px; border-color:var(--amber); }
+.search-card .btn{ margin-top:4px; }
+
+/* ---------- section headers ---------- */
+.sec-head{ display:flex; justify-content:space-between; align-items:flex-end; gap:20px; margin-bottom:38px; flex-wrap:wrap; }
+.sec-head h2{ font-size:clamp(26px,3.4vw,38px); margin-top:10px; }
+.sec-head p{ color:#9c9a92; max-width:440px; font-size:14.5px; }
+
+/* ---------- inventory ---------- */
+.inv-controls{
+  display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; margin-bottom:30px;
+  align-items:center;
+}
+.tabs{ display:flex; gap:8px; background:var(--panel); padding:5px; border-radius:7px; border:1px solid var(--line); }
+.tabs button{ background:transparent; color:#b7b5ad; padding:9px 18px; border-radius:5px; font-family:'Oswald'; font-size:13px; text-transform:uppercase; letter-spacing:0.03em; font-weight:600; }
+.tabs button.active{ background:var(--amber); color:var(--ink); }
+.inv-tools{ display:flex; gap:10px; flex-wrap:wrap; }
+.inv-tools input, .inv-tools select{ width:auto; min-width:150px; }
+
+.car-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+@media(max-width:960px){ .car-grid{grid-template-columns:repeat(2,1fr);} }
+@media(max-width:640px){ .car-grid{grid-template-columns:1fr;} }
+
+.car-card{
+  background:var(--panel); border:1px solid var(--line); border-radius:10px; overflow:hidden;
+  display:flex; flex-direction:column; transition:transform .2s, border-color .2s;
+}
+.car-card:hover{ transform:translateY(-4px); border-color:rgba(255,176,32,0.4); }
+.car-photo{
+  height:150px; position:relative;
+  display:flex; align-items:center; justify-content:center;
+}
+.car-photo .status-tag{
+  position:absolute; top:12px; left:12px;
+  font-family:'Oswald'; font-size:11px; font-weight:700; letter-spacing:0.05em; text-transform:uppercase;
+  padding:5px 10px; border-radius:3px; color:var(--ink);
+}
+.tag-new{ background:var(--amber); }
+.tag-used{ background:#cfd2d8; }
+.car-photo svg{ width:88px; height:auto; opacity:0.92; }
+.car-body{ padding:18px 18px 20px; display:flex; flex-direction:column; gap:10px; flex:1; }
+.car-title{ font-family:'Oswald'; font-size:17px; font-weight:600; text-transform:none; letter-spacing:0; }
+.car-meta{ display:flex; flex-wrap:wrap; gap:6px 14px; font-size:12.5px; color:#9c9a92; font-family:'Space Mono'; }
+.car-price-row{ display:flex; justify-content:space-between; align-items:center; margin-top:4px; }
+.car-actions{ display:flex; gap:8px; margin-top:8px; }
+.car-actions .btn{ flex:1; padding:10px; font-size:11.5px; }
+
+/* ---------- sell your car ---------- */
+.sell-section{ background:var(--panel); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+.sell-grid{ display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:start; }
+@media(max-width:860px){ .sell-grid{grid-template-columns:1fr;} }
+.sell-steps{ display:flex; flex-direction:column; gap:22px; margin-top:24px; }
+.sell-step{ display:flex; gap:16px; }
+.sell-step .num{
+  font-family:'Space Mono'; font-weight:700; color:var(--ink); background:var(--amber);
+  width:34px; height:34px; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0;
+}
+.sell-step h4{ font-size:15px; text-transform:none; letter-spacing:0; margin-bottom:4px; }
+.sell-step p{ font-size:13.5px; color:#9c9a92; }
+.form-card{ background:var(--panel-2); border:1px solid var(--line); border-radius:10px; padding:28px; }
+.form-row2{ display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+@media(max-width:520px){ .form-row2{grid-template-columns:1fr;} }
+.result-box{
+  margin-top:18px; padding:16px; border-radius:7px; background:rgba(255,176,32,0.1); border:1px dashed var(--amber);
+  display:none;
+}
+.result-box.show{ display:block; }
+.result-box .value{ font-family:'Space Mono'; font-size:26px; color:var(--amber); font-weight:700; }
+
+/* ---------- finance ---------- */
+.finance-grid{ display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:center; }
+@media(max-width:860px){ .finance-grid{grid-template-columns:1fr; } }
+.slider-block{ margin-bottom:22px; }
+.slider-top{ display:flex; justify-content:space-between; font-size:13px; margin-bottom:8px; }
+.slider-top .val{ font-family:'Space Mono'; color:var(--amber); font-weight:700; }
+input[type=range]{
+  width:100%; accent-color:var(--amber); background:transparent; padding:0; height:20px;
+}
+.emi-card{
+  background:var(--paper); color:var(--ink); border-radius:10px; padding:30px;
+  border:2.5px solid var(--ink); box-shadow:6px 6px 0 rgba(0,0,0,0.35);
+}
+.emi-top{ text-align:center; padding-bottom:18px; border-bottom:2px dashed var(--ink); margin-bottom:18px; }
+.emi-top .amt{ font-family:'Space Mono'; font-size:42px; font-weight:700; }
+.emi-row{ display:flex; justify-content:space-between; font-size:13.5px; padding:8px 0; border-bottom:1px solid var(--line-dark); }
+.emi-row b{ font-family:'Space Mono'; }
+
+/* ---------- testimonials ---------- */
+.testi-wrap{ position:relative; max-width:720px; margin:0 auto; text-align:center; }
+.testi-slide{ display:none; }
+.testi-slide.active{ display:block; animation:fade .4s ease; }
+@keyframes fade{ from{opacity:0; transform:translateY(6px);} to{opacity:1; transform:translateY(0);} }
+.testi-slide p{ font-size:19px; line-height:1.6; color:#e6e4dc; }
+.testi-slide .who{ margin-top:22px; font-family:'Oswald'; color:var(--amber); font-size:14px; letter-spacing:0.03em; text-transform:uppercase; }
+.testi-slide .who span{ display:block; color:#9c9a92; font-family:'Work Sans'; text-transform:none; letter-spacing:0; font-size:13px; margin-top:2px;}
+.testi-controls{ display:flex; justify-content:center; gap:16px; align-items:center; margin-top:30px; }
+.testi-controls button{ background:var(--panel); border:1px solid var(--line); width:40px; height:40px; border-radius:50%; color:var(--cream); font-size:16px; }
+.testi-controls button:hover{ border-color:var(--amber); color:var(--amber); }
+.dots{ display:flex; gap:8px; }
+.dot{ width:8px; height:8px; border-radius:50%; background:var(--line); }
+.dot.active{ background:var(--amber); }
+
+/* ---------- location ---------- */
+.loc-grid{ display:grid; grid-template-columns:1fr 1fr; gap:0; border:1px solid var(--line); border-radius:10px; overflow:hidden; }
+@media(max-width:860px){ .loc-grid{grid-template-columns:1fr;} }
+.loc-info{ background:var(--panel); padding:36px; }
+.loc-info h3{ font-size:22px; margin-bottom:16px; text-transform:none; letter-spacing:0; }
+.loc-line{ display:flex; gap:12px; margin-bottom:16px; font-size:14px; color:#d4d2c9; }
+.loc-line b{ color:var(--cream); display:block; font-family:'Oswald'; font-size:12px; letter-spacing:0.05em; text-transform:uppercase; margin-bottom:2px; }
+.loc-actions{ display:flex; gap:10px; flex-wrap:wrap; margin-top:22px; }
+.map-frame{ min-height:380px; width:100%; border:0; filter:grayscale(0.15) contrast(1.05); }
+
+/* ---------- contact ---------- */
+.contact-grid{ display:grid; grid-template-columns:1fr 1fr; gap:50px; }
+@media(max-width:860px){ .contact-grid{grid-template-columns:1fr;} }
+.contact-card-list{ display:flex; flex-direction:column; gap:16px; margin-top:24px; }
+.contact-item{ display:flex; gap:14px; align-items:flex-start; padding:16px; background:var(--panel); border:1px solid var(--line); border-radius:8px; }
+.contact-item .ic{ width:38px; height:38px; border-radius:50%; background:rgba(255,176,32,0.15); color:var(--amber); display:flex; align-items:center; justify-content:center; flex-shrink:0; font-weight:700; }
+.toast{
+  position:fixed; bottom:26px; left:50%; transform:translateX(-50%) translateY(120%);
+  background:var(--amber); color:var(--ink); padding:14px 24px; border-radius:6px;
+  font-family:'Oswald'; font-weight:600; letter-spacing:0.03em; font-size:14px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.4); z-index:2000; transition:transform .35s ease;
+}
+.toast.show{ transform:translateX(-50%) translateY(0); }
+
+/* ---------- footer ---------- */
+footer{ background:#101216; border-top:1px solid var(--line); padding:56px 0 26px; }
+.footer-grid{ display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:36px; margin-bottom:40px; }
+@media(max-width:760px){ .footer-grid{grid-template-columns:1fr 1fr;} }
+.footer-grid h5{ font-size:12px; letter-spacing:0.08em; color:#9c9a92; text-transform:uppercase; margin-bottom:14px; }
+.footer-grid ul{ list-style:none; display:flex; flex-direction:column; gap:10px; }
+.footer-grid a{ font-size:14px; color:#d4d2c9; }
+.footer-grid a:hover{ color:var(--amber); }
+.social-row{ display:flex; gap:10px; margin-top:6px; }
+.social-row a{ width:36px; height:36px; border-radius:50%; border:1px solid var(--line); display:flex; align-items:center; justify-content:center; font-size:13px; }
+.social-row a:hover{ border-color:var(--amber); color:var(--amber); }
+.footer-bottom{ display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; padding-top:22px; border-top:1px solid var(--line); font-size:12.5px; color:#7c7a73; }
+
+/* ---------- modal ---------- */
+.modal-overlay{
+  position:fixed; inset:0; background:rgba(10,11,13,0.75); z-index:1000;
+  display:none; align-items:center; justify-content:center; padding:20px; backdrop-filter:blur(3px);
+}
+.modal-overlay.show{ display:flex; }
+.modal{
+  background:var(--panel); border:1px solid var(--line); border-radius:12px; max-width:560px; width:100%;
+  max-height:88vh; overflow-y:auto; padding:30px; position:relative;
+}
+.modal-close{
+  position:absolute; top:16px; right:16px; background:var(--panel-2); width:34px; height:34px; border-radius:50%;
+  color:var(--cream); font-size:16px; display:flex; align-items:center; justify-content:center;
+}
+.modal-close:hover{ color:var(--amber); }
+.modal h3{ font-size:22px; text-transform:none; letter-spacing:0; margin-bottom:6px; padding-right:30px; }
+.modal .sub{ color:#9c9a92; font-size:13.5px; margin-bottom:22px; }
+.detail-photo{ height:150px; border-radius:8px; display:flex; align-items:center; justify-content:center; margin-bottom:18px; }
+.detail-photo svg{ width:100px; }
+.spec-grid{ display:grid; grid-template-columns:1fr 1fr; gap:10px 18px; margin-bottom:20px; }
+.spec-item{ font-size:13px; padding:8px 0; border-bottom:1px solid var(--line); display:flex; justify-content:space-between; }
+.spec-item b{ font-family:'Space Mono'; color:var(--amber); }
+
+/* floating whatsapp + back to top */
+.float-btn{
+  position:fixed; bottom:26px; right:26px; z-index:900;
+  width:56px; height:56px; border-radius:50%; background:#25D366; color:#fff;
+  display:flex; align-items:center; justify-content:center; font-size:26px;
+  box-shadow:0 10px 26px rgba(0,0,0,0.4); transition:transform .2s;
+}
+.float-btn:hover{ transform:scale(1.08); }
+.top-btn{
+  position:fixed; bottom:26px; right:92px; z-index:900;
+  width:44px; height:44px; border-radius:50%; background:var(--panel); border:1px solid var(--line); color:var(--cream);
+  display:none; align-items:center; justify-content:center; font-size:16px;
+  box-shadow:0 10px 26px rgba(0,0,0,0.4);
+}
+.top-btn.show{ display:flex; }
+
+.visually-hidden{ position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0,0,0,0); }
+
+@media(max-width:900px){
+  .nav-links{ position:fixed; top:69px; left:0; right:0; background:var(--asphalt); flex-direction:column; padding:20px 24px;
+    border-bottom:1px solid var(--line); display:none; gap:16px; align-items:flex-start; }
+  .nav-links.open{ display:flex; }
+  .hamburger{ display:flex; }
+  .nav-cta .btn-outline{ display:none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header>
+  <nav>
+    <a href="#home" class="logo">
+      <span class="logo-badge">S</span>
+      SHIVA<span>&nbsp;CAR&nbsp;DEALS</span>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#inventory" class="nav-link">Inventory</a>
+      <a href="#sell" class="nav-link">Sell Your Car</a>
+      <a href="#finance" class="nav-link">Financing</a>
+      <a href="#location" class="nav-link">Location</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <a href="tel:+919812045678" class="btn btn-outline btn-sm">☎ Call Now</a>
+      <button class="btn btn-amber btn-sm" onclick="openEnquiryModal()">Get a Quote</button>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Jhojhu Kalan, Haryana · Est. 2026</div>
+      <h1>New &amp; used cars,<br><em>zero drama</em> deals.</h1>
+      <p class="lead">Shiva Car Deals is Haryana's trusted showroom for brand-new launches and hand-picked, inspected used cars — fair pricing, easy financing, same-day paperwork.</p>
+      <div class="hero-actions">
+        <button class="btn btn-amber" onclick="scrollToSection('inventory')">Browse Inventory</button>
+        <button class="btn btn-outline" onclick="scrollToSection('sell')">Sell My Car</button>
+      </div>
+      <div class="stat-row">
+        <div class="stat"><b class="mono">1,200+</b><span>Cars Delivered</span></div>
+        <div class="stat"><b class="mono">14</b><span>Years in Business</span></div>
+        <div class="stat"><b class="mono">4.8★</b><span>Customer Rating</span></div>
+        <div class="stat"><b class="mono">30+</b><span>Cars in Stock</span></div>
+      </div>
+    </div>
+
+    <div class="search-card">
+      <div class="mode-toggle" id="modeToggle">
+        <button class="active" data-mode="new" type="button">Buy New</button>
+        <button data-mode="used" type="button">Buy Used</button>
+        <button data-mode="sell" type="button">Sell / Exchange</button>
+      </div>
+      <div id="buyFields">
+        <div class="field">
+          <label class="field-label">Brand</label>
+          <select id="searchBrand">
+            <option value="">Any Brand</option>
+          </select>
+        </div>
+        <div class="field">
+          <label class="field-label">Budget</label>
+          <select id="searchBudget">
+            <option value="0-600000">Under ₹6 Lakh</option>
+            <option value="600000-1000000">₹6L – ₹10L</option>
+            <option value="1000000-1500000">₹10L – ₹15L</option>
+            <option value="1500000-99999999">Above ₹15L</option>
+          </select>
+        </div>
+        <button class="btn btn-amber btn-full" id="searchBtn" type="button">Search Cars</button>
+      </div>
+      <div id="sellFields" style="display:none;">
+        <p style="font-size:13.5px;color:#c7c5bd;margin-bottom:16px;">Get an instant estimated valuation for your car — no visit needed to start.</p>
+        <button class="btn btn-amber btn-full" type="button" onclick="scrollToSection('sell')">Get My Car's Value</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INVENTORY ============ -->
+<section id="inventory">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow">Available Now</div>
+        <h2>Browse the showroom floor</h2>
+      </div>
+      <p>Every used car passes a 120-point inspection. Every new car ships with the manufacturer warranty, on-road paperwork, and RC transfer handled for you.</p>
+    </div>
+
+    <div class="inv-controls">
+      <div class="tabs" id="invTabs">
+        <button class="active" data-filter="all" type="button">All Cars</button>
+        <button data-filter="new" type="button">New</button>
+        <button data-filter="used" type="button">Used</button>
+      </div>
+      <div class="inv-tools">
+        <input type="text" id="invSearch" placeholder="Search brand or model…">
+        <select id="invSort">
+          <option value="default">Sort: Featured</option>
+          <option value="price-asc">Price: Low to High</option>
+          <option value="price-desc">Price: High to Low</option>
+          <option value="year-desc">Year: Newest First</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="car-grid" id="carGrid"></div>
+  </div>
+</section>
+
+<!-- ============ SELL YOUR CAR ============ -->
+<section class="sell-section" id="sell">
+  <div class="wrap sell-grid">
+    <div>
+      <div class="eyebrow">Sell or Exchange</div>
+      <h2 style="font-size:clamp(24px,3vw,34px); margin-top:10px;">Turn your car into cash — or your next car.</h2>
+      <p style="color:#9c9a92; margin-top:12px; font-size:14.5px; max-width:440px;">Tell us about your car and get an instant estimated range. A Shiva Car Deals evaluator confirms the final offer at a free 30-minute inspection at our Jhojhu Kalan yard.</p>
+      <div class="sell-steps">
+        <div class="sell-step">
+          <div class="num mono">1</div>
+          <div><h4>Share your car's details</h4><p>Brand, model, year, and running — takes under a minute.</p></div>
+        </div>
+        <div class="sell-step">
+          <div class="num mono">2</div>
+          <div><h4>Get an instant estimate</h4><p>Our pricing engine benchmarks against live Haryana resale data.</p></div>
+        </div>
+        <div class="sell-step">
+          <div class="num mono">3</div>
+          <div><h4>Free inspection &amp; final offer</h4><p>Bring the car in, or we send an evaluator to you.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-card">
+      <h3 style="font-size:18px; text-transform:none; margin-bottom:18px;">Get your car's estimated value</h3>
+      <form id="valuationForm">
+        <div class="form-row2">
+          <div class="field">
+            <label class="field-label">Your Name</label>
+            <input type="text" required placeholder="e.g. Rohit Sharma">
+          </div>
+          <div class="field">
+            <label class="field-label">Phone Number</label>
+            <input type="tel" required pattern="[0-9]{10}" placeholder="10-digit mobile number">
+          </div>
+        </div>
+        <div class="form-row2">
+          <div class="field">
+            <label class="field-label">Brand</label>
+            <select id="valBrand" required>
+              <option value="">Select Brand</option>
+              <option value="Maruti Suzuki">Maruti Suzuki</option>
+              <option value="Hyundai">Hyundai</option>
+              <option value="Tata">Tata</option>
+              <option value="Mahindra">Mahindra</option>
+              <option value="Honda">Honda</option>
+              <option value="Toyota">Toyota</option>
+              <option value="Kia">Kia</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label class="field-label">Year of Purchase</label>
+            <select id="valYear" required>
+              <option value="">Select Year</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row2">
+          <div class="field">
+            <label class="field-label">Kilometers Driven</label>
+            <input type="number" id="valKm" required placeholder="e.g. 42000">
+          </div>
+          <div class="field">
+            <label class="field-label">Condition</label>
+            <select id="valCondition" required>
+              <option value="1.08">Excellent</option>
+              <option value="1.0">Good</option>
+              <option value="0.88">Average</option>
+              <option value="0.72">Needs Work</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-amber btn-full">Calculate Estimated Value</button>
+      </form>
+      <div class="result-box" id="valResult">
+        <div style="font-size:12px; letter-spacing:0.06em; text-transform:uppercase; color:#c7c5bd;">Estimated Value Range</div>
+        <div class="value" id="valOutput">₹0 – ₹0</div>
+        <p style="font-size:12.5px; color:#c7c5bd; margin-top:8px;">This is an instant estimate. Final offer confirmed after free inspection.</p>
+        <button class="btn btn-dark btn-sm" style="margin-top:12px;" type="button" onclick="openEnquiryModal('Car Valuation Follow-up')">Book Free Inspection</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINANCE ============ -->
+<section id="finance">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow">Easy Financing</div>
+        <h2>Work out your monthly EMI</h2>
+      </div>
+      <p>Partnered with leading Haryana banks and NBFCs for loans up to 90% on-road financing, approved in as little as 24 hours.</p>
+    </div>
+    <div class="finance-grid">
+      <div>
+        <div class="slider-block">
+          <div class="slider-top"><span>Loan Amount</span><span class="val mono" id="loanAmtLabel">₹8,00,000</span></div>
+          <input type="range" id="loanAmt" min="100000" max="2500000" step="10000" value="800000">
+        </div>
+        <div class="slider-block">
+          <div class="slider-top"><span>Down Payment</span><span class="val mono" id="downPayLabel">₹1,00,000</span></div>
+          <input type="range" id="downPay" min="0" max="1000000" step="10000" value="100000">
+        </div>
+        <div class="slider-block">
+          <div class="slider-top"><span>Loan Tenure</span><span class="val mono" id="tenureLabel">60 months</span></div>
+          <input type="range" id="tenure" min="12" max="84" step="6" value="60">
+        </div>
+        <div class="slider-block">
+          <div class="slider-top"><span>Interest Rate (p.a.)</span><span class="val mono" id="rateLabel">9.5%</span></div>
+          <input type="range" id="rate" min="7" max="15" step="0.1" value="9.5">
+        </div>
+      </div>
+      <div class="emi-card">
+        <div class="emi-top">
+          <div style="font-size:12px;letter-spacing:0.08em;text-transform:uppercase;">Monthly EMI</div>
+          <div class="amt" id="emiOutput">₹0</div>
+        </div>
+        <div class="emi-row"><span>Principal Loan Amount</span><b id="emiPrincipal">₹0</b></div>
+        <div class="emi-row"><span>Total Interest Payable</span><b id="emiInterest">₹0</b></div>
+        <div class="emi-row"><span>Total Amount Payable</span><b id="emiTotal">₹0</b></div>
+        <button class="btn btn-dark btn-full" style="margin-top:20px;" onclick="openEnquiryModal('EMI Financing Application')">Apply for This Loan</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section style="background:var(--panel); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+  <div class="wrap">
+    <div class="eyebrow" style="justify-content:center;">What Customers Say</div>
+    <h2 style="text-align:center; margin:10px 0 40px; font-size:clamp(24px,3vw,32px);">1,200+ happy drivers across Haryana</h2>
+    <div class="testi-wrap">
+      <div class="testi-slide active">
+        <p>"Bought a used Baleno here — the inspection report matched the car exactly. No surprises, RC transfer done in 4 days."</p>
+        <div class="who">Rakesh Dangi <span>Jhojhu Kalan · Bought Baleno</span></div>
+      </div>
+      <div class="testi-slide">
+        <p>"Sold my old Baleno through their exchange program and drove home a new Creta the same evening. Genuinely smooth process."</p>
+        <div class="who">Priya Yadav <span>Bhiwadi · Exchanged for Creta</span></div>
+      </div>
+      <div class="testi-slide">
+        <p>"Financing was sorted in a day. The EMI calculator on their site matched the bank's final numbers almost exactly."</p>
+        <div class="who">Sandeep Kumar <span>Gurugram · Bought Nexon EV</span></div>
+      </div>
+      <div class="testi-slide">
+        <p>"Straightforward negotiation, no hidden charges at billing. This is my second car from Shiva Car Deals."</p>
+        <div class="who">Meenakshi Chauhan <span>Jhojhu Kalan · Bought Swift</span></div>
+      </div>
+      <div class="testi-controls">
+        <button id="testiPrev" aria-label="Previous testimonial">←</button>
+        <div class="dots" id="testiDots"></div>
+        <button id="testiNext" aria-label="Next testimonial">→</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LOCATION ============ -->
+<section id="location">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow">Visit the Showroom</div>
+        <h2>Find us in Jhojhu Kalan</h2>
+      </div>
+      <p>Walk-ins welcome all week. Test drives available on both new and used cars — just call ahead to reserve your slot.</p>
+    </div>
+    <div class="loc-grid">
+      <div class="loc-info">
+        <h3>Shiva Car Deals — Jhojhu Kalan Showroom</h3>
+        <div class="loc-line"><div><b>Address</b>Charkhi Dadri Road, Near Govt. Girls school, Jhojhu Kalan, Haryana 127310 </div></div>
+        <div class="loc-line"><div><b>Phone</b>+91 7300054351</div></div>
+        <div class="loc-line"><div><b>Email</b>hello@shivacardeals.in</div></div>
+        <div class="loc-line"><div><b>Showroom Hours</b>Mon – Sat: 9:30 AM – 8:00 PM · Sun: 10:00 AM – 6:00 PM</div></div>
+        <div class="loc-actions">
+          <button class="btn btn-amber" type="button" onclick="getDirections()">Get Directions</button>
+          <a class="btn btn-outline" href="tel:+919812045678">Call Showroom</a>
+          <a class="btn btn-outline" href="https://wa.me/919812045678?text=Hi%20Shiva%20Car%20Deals%2C%20I%27d%20like%20to%20know%20more." target="_blank" rel="noopener">WhatsApp Us</a>
+        </div>
+      </div>
+      <iframe class="map-frame" id="mapFrame"
+        src="https://www.google.com/maps?q=Model+Town,+Jhojhu Kalan,+Haryana&output=embed"
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Shiva Car Deals location map"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <div class="eyebrow">Get in Touch</div>
+      <h2 style="font-size:clamp(24px,3vw,34px); margin-top:10px;">Questions? We reply within the hour.</h2>
+      <p style="color:#9c9a92; margin-top:12px; font-size:14.5px; max-width:420px;">Whether it's about a specific car, financing, or trade-in — send us a message and our team will get back to you.</p>
+      <div class="contact-card-list">
+        <div class="contact-item"><div class="ic">☎</div><div><b style="display:block;font-family:'Oswald';font-size:13px;">Call Us</b><span style="font-size:13.5px;color:#c7c5bd;"><a href="tel:+919812045678">+91 7300054351</a></span></div></div>
+        <div class="contact-item"><div class="ic">✉</div><div><b style="display:block;font-family:'Oswald';font-size:13px;">Email Us</b><span style="font-size:13.5px;color:#c7c5bd;"><a href="mailto:hello@shivacardeals.in">hello@shivacardeals.in</a></span></div></div>
+        <div class="contact-item"><div class="ic">⌂</div><div><b style="display:block;font-family:'Oswald';font-size:13px;">Visit Us</b><span style="font-size:13.5px;color:#c7c5bd;">Charkhi Dadri Road, Jhojhu Kalan, Haryana 127310 </span></div></div>
+      </div>
+    </div>
+    <div class="form-card">
+      <h3 style="font-size:18px; text-transform:none; margin-bottom:18px;">Send a message</h3>
+      <form id="contactForm">
+        <div class="field"><label class="field-label">Full Name</label><input type="text" required placeholder="Your name"></div>
+        <div class="field"><label class="field-label">Phone or Email</label><input type="text" required placeholder="How should we reach you?"></div>
+        <div class="field"><label class="field-label">Message</label><textarea rows="4" required placeholder="Tell us what you're looking for…"></textarea></div>
+        <button type="submit" class="btn btn-amber btn-full">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="margin-bottom:14px;"><span class="logo-badge">S</span>SHIVA<span>&nbsp;CAR&nbsp;DEALS</span></div>
+        <p style="font-size:13.5px; color:#9c9a92; max-width:280px;">Jhojhu Kalan's trusted dealership for new and inspected used cars since 2026.</p>
+        <div class="social-row">
+          <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+          <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Instagram">ig</a>
+          <a href="https://www.youtube.com" target="_blank" rel="noopener" aria-label="YouTube">yt</a>
+        </div>
+      </div>
+      <div>
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="#inventory" class="nav-link">Inventory</a></li>
+          <li><a href="#sell" class="nav-link">Sell Your Car</a></li>
+          <li><a href="#finance" class="nav-link">Financing</a></li>
+          <li><a href="#location" class="nav-link">Location</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Popular Brands</h5>
+        <ul>
+          <li><a href="#" onclick="filterByBrandFooter(event,'Maruti Suzuki')">Maruti Suzuki</a></li>
+          <li><a href="#" onclick="filterByBrandFooter(event,'Hyundai')">Hyundai</a></li>
+          <li><a href="#" onclick="filterByBrandFooter(event,'Tata')">Tata</a></li>
+          <li><a href="#" onclick="filterByBrandFooter(event,'Mahindra')">Mahindra</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="tel:+919812045678">+91 7300054351</a></li>
+          <li><a href="mailto:hello@shivacardeals.in">hello@shivacardeals.in</a></li>
+          <li><a href="#location" class="nav-link">Jhojhu Kalan, Haryana</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Shiva Car Deals. All rights reserved.</span>
+      <span>Built for Haryana's roads.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ ENQUIRY MODAL ============ -->
+<div class="modal-overlay" id="enquiryOverlay">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('enquiryOverlay')">✕</button>
+    <div id="enquiryContent">
+      <h3 id="enquiryTitle">Enquire Now</h3>
+      <p class="sub" id="enquirySub">Fill in your details and our team will call you back shortly.</p>
+      <form id="enquiryForm">
+        <div class="form-row2">
+          <div class="field"><label class="field-label">Full Name</label><input type="text" required placeholder="Your name"></div>
+          <div class="field"><label class="field-label">Phone Number</label><input type="tel" required pattern="[0-9]{10}" placeholder="10-digit mobile number"></div>
+        </div>
+        <div class="field"><label class="field-label">Message (optional)</label><textarea rows="3" placeholder="Any specific requirement?"></textarea></div>
+        <button type="submit" class="btn btn-amber btn-full">Submit Enquiry</button>
+      </form>
+    </div>
+    <div id="enquirySuccess" style="display:none; text-align:center; padding:20px 0;">
+      <div style="font-size:44px;">✓</div>
+      <h3 style="margin-top:10px;">Enquiry received!</h3>
+      <p class="sub">A Shiva Car Deals representative will call you within the hour.</p>
+      <button class="btn btn-outline" onclick="closeModal('enquiryOverlay')">Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ CAR DETAIL MODAL ============ -->
+<div class="modal-overlay" id="detailOverlay">
+  <div class="modal" id="detailModalBody"></div>
+</div>
+
+<div class="toast" id="toast"></div>
+<a href="https://wa.me/919812045678?text=Hi%20Shiva%20Car%20Deals%2C%20I%27d%20like%20to%20enquire." target="_blank" rel="noopener" class="float-btn" aria-label="Chat on WhatsApp">☏</a>
+<button class="top-btn" id="topBtn" aria-label="Back to top">↑</button>
+
+<script>
+/* ================= DATA ================= */
+const cars = [
+  {id:1, brand:"Maruti Suzuki", model:"Swift ZXi", type:"new", year:2026, km:null, price:649000, fuel:"Petrol", trans:"Manual", color:"Pearl White"},
+  {id:2, brand:"Hyundai", model:"Creta SX", type:"new", year:2026, km:null, price:1120000, fuel:"Petrol", trans:"Automatic", color:"Fiery Red"},
+  {id:3, brand:"Tata", model:"Nexon EV Max", type:"new", year:2026, km:null, price:1450000, fuel:"Electric", trans:"Automatic", color:"Intensi-Blue"},
+  {id:4, brand:"Mahindra", model:"Thar LX", type:"new", year:2026, km:null, price:1390000, fuel:"Diesel", trans:"Manual", color:"Napoli Black"},
+  {id:5, brand:"Honda", model:"City VX", type:"used", year:2022, km:28000, price:980000, fuel:"Petrol", trans:"Automatic", color:"Lunar Silver"},
+  {id:6, brand:"Maruti Suzuki", model:"Baleno Delta", type:"used", year:2021, km:34500, price:560000, fuel:"Petrol", trans:"Manual", color:"Granite Grey"},
+  {id:7, brand:"Toyota", model:"Innova Crysta GX", type:"used", year:2020, km:52000, price:1520000, fuel:"Diesel", trans:"Manual", color:"Super White"},
+  {id:8, brand:"Kia", model:"Seltos HTX", type:"used", year:2023, km:18200, price:1090000, fuel:"Petrol", trans:"Automatic", color:"Intense Red"},
+  {id:9, brand:"Hyundai", model:"i20 Sportz", type:"new", year:2026, km:null, price:780000, fuel:"Petrol", trans:"Manual", color:"Atlas White"},
+  {id:10, brand:"Mahindra", model:"XUV700 AX7", type:"used", year:2022, km:25000, price:1740000, fuel:"Diesel", trans:"Automatic", color:"Midnight Black"},
+];
+
+const carColors = ["#FFB020","#D6483F","#3E7CB1","#5B8C5A","#9C6ADE"];
+
+function carSvg(idx){
+  const c = carColors[idx % carColors.length];
+  return `<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+    <rect x="10" y="55" width="180" height="24" rx="6" fill="${c}"/>
+    <path d="M35 55 L55 30 Q60 25 68 25 L132 25 Q140 25 145 30 L165 55 Z" fill="${c}"/>
+    <path d="M60 32 L70 30 L98 30 L98 50 L60 50 Z" fill="#15171B" opacity="0.55"/>
+    <path d="M102 30 L130 30 L138 50 L102 50 Z" fill="#15171B" opacity="0.55"/>
+    <circle cx="55" cy="80" r="14" fill="#15171B"/><circle cx="55" cy="80" r="6" fill="#C8CCD1"/>
+    <circle cx="150" cy="80" r="14" fill="#15171B"/><circle cx="150" cy="80" r="6" fill="#C8CCD1"/>
+  </svg>`;
+}
+
+function fmtINR(n){
+  if(n >= 100000){ return "₹" + (n/100000).toFixed(2).replace(/\\.00$/,'') + " Lakh"; }
+  return "₹" + n.toLocaleString('en-IN');
+}
+function fmtFull(n){ return "₹" + Math.round(n).toLocaleString('en-IN'); }
+
+/* ================= RENDER INVENTORY ================= */
+const grid = document.getElementById('carGrid');
+let currentFilter = 'all';
+let currentSearch = '';
+let currentSort = 'default';
+
+function renderCars(){
+  let list = cars.filter(c => currentFilter === 'all' || c.type === currentFilter);
+  if(currentSearch.trim()){
+    const q = currentSearch.toLowerCase();
+    list = list.filter(c => (c.brand+' '+c.model).toLowerCase().includes(q));
+  }
+  if(currentSort === 'price-asc') list = [...list].sort((a,b)=>a.price-b.price);
+  if(currentSort === 'price-desc') list = [...list].sort((a,b)=>b.price-a.price);
+  if(currentSort === 'year-desc') list = [...list].sort((a,b)=>b.year-a.year);
+
+  grid.innerHTML = list.length ? list.map((c,i)=>`
+    <div class="car-card">
+      <div class="car-photo" style="background:linear-gradient(160deg, var(--panel-2), var(--asphalt));">
+        <span class="status-tag ${c.type==='new'?'tag-new':'tag-used'}">${c.type==='new'?'New':'Used'}</span>
+        ${carSvg(c.id)}
+      </div>
+      <div class="car-body">
+        <div class="car-title">${c.brand} ${c.model}</div>
+        <div class="car-meta">
+          <span>${c.year}</span><span>${c.fuel}</span><span>${c.trans}</span>
+          ${c.km ? `<span>${c.km.toLocaleString('en-IN')} km</span>` : `<span>0 km</span>`}
+        </div>
+        <div class="car-price-row">
+          <span class="plate ${c.type==='new'?'amber-plate':''}"><span class="flag">IND</span>${fmtINR(c.price)}</span>
+        </div>
+        <div class="car-actions">
+          <button class="btn btn-outline" type="button" onclick="openDetail(${c.id})">View Details</button>
+          <button class="btn btn-amber" type="button" onclick="openEnquiryModal('${c.brand} ${c.model}')">Enquire</button>
+        </div>
+      </div>
+    </div>
+  `).join('') : `<p style="color:#9c9a92; grid-column:1/-1; text-align:center; padding:40px 0;">No cars match your search. Try a different brand or filter.</p>`;
+}
+
+// populate year dropdown for valuation form
+const valYearSelect = document.getElementById('valYear');
+for(let y=2026; y>=2026; y--){
+  const opt = document.createElement('option'); opt.value=y; opt.textContent=y; valYearSelect.appendChild(opt);
+}
+
+// populate brand dropdown
+const brandSelect = document.getElementById('searchBrand');
+[...new Set(cars.map(c=>c.brand))].forEach(b=>{
+  const opt = document.createElement('option'); opt.value=b; opt.textContent=b; brandSelect.appendChild(opt);
+});
+
+renderCars();
+
+/* filter tabs */
+document.getElementById('invTabs').addEventListener('click', e=>{
+  const btn = e.target.closest('button'); if(!btn) return;
+  document.querySelectorAll('#invTabs button').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  currentFilter = btn.dataset.filter;
+  renderCars();
+});
+document.getElementById('invSearch').addEventListener('input', e=>{ currentSearch = e.target.value; renderCars(); });
+document.getElementById('invSort').addEventListener('change', e=>{ currentSort = e.target.value; renderCars(); });
+
+/* hero mode toggle */
+document.getElementById('modeToggle').addEventListener('click', e=>{
+  const btn = e.target.closest('button'); if(!btn) return;
+  document.querySelectorAll('#modeToggle button').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  const mode = btn.dataset.mode;
+  document.getElementById('buyFields').style.display = mode === 'sell' ? 'none' : 'block';
+  document.getElementById('sellFields').style.display = mode === 'sell' ? 'block' : 'none';
+});
+
+/* hero search button */
+document.getElementById('searchBtn').addEventListener('click', ()=>{
+  const activeMode = document.querySelector('#modeToggle button.active').dataset.mode;
+  const brand = document.getElementById('searchBrand').value;
+  const [min,max] = document.getElementById('searchBudget').value.split('-').map(Number);
+  currentFilter = activeMode === 'used' ? 'used' : 'all';
+  document.querySelectorAll('#invTabs button').forEach(b=>b.classList.toggle('active', b.dataset.filter===currentFilter));
+  currentSearch = brand || '';
+  document.getElementById('invSearch').value = brand || '';
+  let list = cars.filter(c=> (currentFilter==='all'||c.type===currentFilter) && c.price>=min && c.price<=max && (!brand || c.brand===brand));
+  renderCarsCustom(list);
+  scrollToSection('inventory');
+});
+function renderCarsCustom(list){
+  grid.innerHTML = list.length ? list.map((c,i)=>`
+    <div class="car-card">
+      <div class="car-photo" style="background:linear-gradient(160deg, var(--panel-2), var(--asphalt));">
+        <span class="status-tag ${c.type==='new'?'tag-new':'tag-used'}">${c.type==='new'?'New':'Used'}</span>
+        ${carSvg(c.id)}
+      </div>
+      <div class="car-body">
+        <div class="car-title">${c.brand} ${c.model}</div>
+        <div class="car-meta"><span>${c.year}</span><span>${c.fuel}</span><span>${c.trans}</span>${c.km?`<span>${c.km.toLocaleString('en-IN')} km</span>`:`<span>0 km</span>`}</div>
+        <div class="car-price-row"><span class="plate ${c.type==='new'?'amber-plate':''}"><span class="flag">IND</span>${fmtINR(c.price)}</span></div>
+        <div class="car-actions">
+          <button class="btn btn-outline" type="button" onclick="openDetail(${c.id})">View Details</button>
+          <button class="btn btn-amber" type="button" onclick="openEnquiryModal('${c.brand} ${c.model}')">Enquire</button>
+        </div>
+      </div>
+    </div>`).join('') : `<p style="color:#9c9a92; grid-column:1/-1; text-align:center; padding:40px 0;">No cars matched that search — showing full inventory instead.</p>${(renderCars(),'')}`;
+}
+
+function filterByBrandFooter(e, brand){
+  e.preventDefault();
+  currentSearch = brand;
+  document.getElementById('invSearch').value = brand;
+  currentFilter = 'all';
+  document.querySelectorAll('#invTabs button').forEach(b=>b.classList.toggle('active', b.dataset.filter==='all'));
+  renderCars();
+  scrollToSection('inventory');
+}
+
+/* ================= DETAIL MODAL ================= */
+function openDetail(id){
+  const c = cars.find(x=>x.id===id);
+  const idx = cars.indexOf(c);
+  document.getElementById('detailModalBody').innerHTML = `
+    <button class="modal-close" onclick="closeModal('detailOverlay')">✕</button>
+    <div class="detail-photo" style="background:linear-gradient(160deg, var(--panel-2), var(--asphalt));">${carSvg(c.id)}</div>
+    <h3>${c.brand} ${c.model}</h3>
+    <p class="sub">${c.type==='new'?'Brand New':'Certified Used'} · ${c.color}</p>
+    <span class="plate ${c.type==='new'?'amber-plate':''}" style="margin-bottom:20px; display:inline-flex;"><span class="flag">IND</span>${fmtINR(c.price)}</span>
+    <div class="spec-grid">
+      <div class="spec-item"><span>Year</span><b>${c.year}</b></div>
+      <div class="spec-item"><span>Fuel Type</span><b>${c.fuel}</b></div>
+      <div class="spec-item"><span>Transmission</span><b>${c.trans}</b></div>
+      <div class="spec-item"><span>Odometer</span><b>${c.km ? c.km.toLocaleString('en-IN')+' km' : '0 km'}</b></div>
+      <div class="spec-item"><span>Color</span><b>${c.color}</b></div>
+      <div class="spec-item"><span>Est. EMI</span><b>${fmtFull(estimateEmi(c.price))}/mo</b></div>
+    </div>
+    <div style="display:flex; gap:10px;">
+      <button class="btn btn-outline" style="flex:1;" type="button" onclick="closeModal('detailOverlay')">Close</button>
+      <button class="btn btn-amber" style="flex:1;" type="button" onclick="closeModal('detailOverlay'); openEnquiryModal('${c.brand} ${c.model}')">Enquire About This Car</button>
+    </div>
+  `;
+  document.getElementById('detailOverlay').classList.add('show');
+}
+function estimateEmi(price){
+  const loan = price*0.85, r = 0.095/12, n = 60;
+  return loan*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1);
+}
+
+/* ================= ENQUIRY MODAL ================= */
+function openEnquiryModal(context){
+  document.getElementById('enquiryForm').style.display='block';
+  document.getElementById('enquirySuccess').style.display='none';
+  document.getElementById('enquiryForm').reset();
+  document.getElementById('enquiryTitle').textContent = context ? `Enquire — ${context}` : 'Get a Quote';
+  document.getElementById('enquirySub').textContent = context
+    ? `Interested in the ${context}? Leave your number and we'll call you back.`
+    : `Tell us what you're looking for and our team will call you back shortly.`;
+  document.getElementById('enquiryOverlay').classList.add('show');
+}
+document.getElementById('enquiryForm').addEventListener('submit', e=>{
+  e.preventDefault();
+  document.getElementById('enquiryForm').style.display='none';
+  document.getElementById('enquirySuccess').style.display='block';
+});
+
+function closeModal(id){ document.getElementById(id).classList.remove('show'); }
+document.querySelectorAll('.modal-overlay').forEach(ov=>{
+  ov.addEventListener('click', e=>{ if(e.target===ov) ov.classList.remove('show'); });
+});
+document.addEventListener('keydown', e=>{
+  if(e.key==='Escape'){ document.querySelectorAll('.modal-overlay.show').forEach(ov=>ov.classList.remove('show')); }
+});
+
+/* ================= SELL / VALUATION FORM ================= */
+document.getElementById('valuationForm').addEventListener('submit', e=>{
+  e.preventDefault();
+  const brand = document.getElementById('valBrand').value;
+  const year = parseInt(document.getElementById('valYear').value);
+  const km = parseFloat(document.getElementById('valKm').value) || 0;
+  const cond = parseFloat(document.getElementById('valCondition').value);
+  const brandBase = {"Maruti Suzuki":700000,"Hyundai":850000,"Tata":800000,"Mahindra":950000,"Honda":900000,"Toyota":1100000,"Kia":950000,"Other":650000}[brand] || 650000;
+  const age = Math.max(0, 2026 - year);
+  const ageDep = Math.pow(0.89, age);
+  const kmDep = Math.max(0.55, 1 - (km/15000)*0.035);
+  let value = brandBase * ageDep * kmDep * cond;
+  const low = Math.max(50000, value*0.9);
+  const high = value*1.1;
+  document.getElementById('valOutput').textContent = fmtINR(low) + ' – ' + fmtINR(high);
+  document.getElementById('valResult').classList.add('show');
+  document.getElementById('valResult').scrollIntoView({behavior:'smooth', block:'nearest'});
+});
+
+/* ================= EMI CALCULATOR ================= */
+const loanAmt = document.getElementById('loanAmt'), downPay = document.getElementById('downPay'),
+      tenure = document.getElementById('tenure'), rate = document.getElementById('rate');
+
+function updateEmi(){
+  const P = Math.max(0, +loanAmt.value - +downPay.value);
+  const n = +tenure.value;
+  const r = (+rate.value/100)/12;
+  const emi = r === 0 ? P/n : P*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1);
+  const total = emi*n;
+  const interest = total - P;
+
+  document.getElementById('loanAmtLabel').textContent = fmtFull(+loanAmt.value);
+  document.getElementById('downPayLabel').textContent = fmtFull(+downPay.value);
+  document.getElementById('tenureLabel').textContent = n + ' months';
+  document.getElementById('rateLabel').textContent = (+rate.value).toFixed(1) + '%';
+
+  document.getElementById('emiOutput').textContent = fmtFull(emi) + '/mo';
+  document.getElementById('emiPrincipal').textContent = fmtFull(P);
+  document.getElementById('emiInterest').textContent = fmtFull(interest);
+  document.getElementById('emiTotal').textContent = fmtFull(total);
+}
+[loanAmt, downPay, tenure, rate].forEach(el => el.addEventListener('input', updateEmi));
+updateEmi();
+
+/* ================= TESTIMONIALS CAROUSEL ================= */
+const slides = document.querySelectorAll('.testi-slide');
+const dotsWrap = document.getElementById('testiDots');
+let testiIndex = 0;
+slides.forEach((_, i)=>{
+  const d = document.createElement('div'); d.className = 'dot' + (i===0?' active':'');
+  d.addEventListener('click', ()=> goTestimonial(i));
+  dotsWrap.appendChild(d);
+});
+function goTestimonial(i){
+  slides[testiIndex].classList.remove('active');
+  dotsWrap.children[testiIndex].classList.remove('active');
+  testiIndex = (i + slides.length) % slides.length;
+  slides[testiIndex].classList.add('active');
+  dotsWrap.children[testiIndex].classList.add('active');
+}
+document.getElementById('testiPrev').addEventListener('click', ()=> goTestimonial(testiIndex-1));
+document.getElementById('testiNext').addEventListener('click', ()=> goTestimonial(testiIndex+1));
+let testiTimer = setInterval(()=> goTestimonial(testiIndex+1), 6000);
+
+/* ================= CONTACT FORM ================= */
+document.getElementById('contactForm').addEventListener('submit', e=>{
+  e.preventDefault();
+  showToast('Message sent — we\\'ll get back to you within the hour.');
+  e.target.reset();
+});
+
+/* ================= TOAST ================= */
+function showToast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(()=> t.classList.remove('show'), 3200);
+}
+
+/* ================= NAV / SCROLL ================= */
+function scrollToSection(id){
+  document.getElementById(id).scrollIntoView({behavior:'smooth', block:'start'});
+  document.getElementById('navLinks').classList.remove('open');
+}
+document.querySelectorAll('.nav-link').forEach(link=>{
+  link.addEventListener('click', e=>{
+    e.preventDefault();
+    scrollToSection(link.getAttribute('href').slice(1));
+  });
+});
+document.getElementById('hamburgerBtn').addEventListener('click', ()=>{
+  document.getElementById('navLinks').classList.toggle('open');
+});
+
+/* directions button */
+function getDirections(){
+  window.open('https://www.google.com/maps/dir/?api=1&destination=Model+Town,+Jhojhu Kalan,+Haryana', '_blank');
+}
+
+/* back to top */
+const topBtn = document.getElementById('topBtn');
+window.addEventListener('scroll', ()=>{
+  topBtn.classList.toggle('show', window.scrollY > 600);
+});
+topBtn.addEventListener('click', ()=> window.scrollTo({top:0, behavior:'smooth'}));
+</script>
+</body>
+</html>
